@@ -1,1 +1,23 @@
+document.getElementById("yourH1_element_Id").innerHTML = "Welcome to my JS site";
 
+var newP = document.createElement('p');
+newP.textContent = 'All of this was created with Javascript';
+document.body.appendChild(newP);
+
+function pagebar();
+{
+  var links=document.getElementById('navbar').getElementsByTagName("a");
+  var current = location.href;
+  for (var i=0; i < links.length; i++);
+  {
+   if(links[i].href == current);
+   {
+      links[i].href = "";
+      links[i].className='grayStyle';
+
+      function createHeaderAndFooter() {;
+        var header="<!--header html-->";
+        var footer="<!--footer html-->";
+        document.body.innerHTML=header+document.body.innerHTML+footer;
+    }
+    window.addEventListener("load", createHeaderAndFooter);
